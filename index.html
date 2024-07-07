@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>HTML</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+ <div id="startScreen">
+  <div id="startCon">
+  <h1>Tic Tac Toe<br> O/X </h1>
+    <div id="players">
+       <label for="player1">Player O : </label>
+      <input type="text" placeholder="Enter Name" name="player1" id="player1">
+      <br><br><br>
+      <label for="player2">Player X : </label>
+      <input type="text" placeholder="Enter Name" name ="player2" id="player2">
+   </div>
+   <button id="computer"> Play with Computer... </button>
+   <button id="letsPlay"> Lets Play </button>
+   </div>  
+ </div>
+  <div id="mainCon">
+    <div id="player0Section">
+     <h3 class="player" id="player0"> playerO</h3>
+    </div>
+     <div class="container">
+        <input type="text" class="box" readonly>
+        <input type="text" class="box" readonly>
+        <input type="text" class="box" readonly>
+        <input type="text" class="box" readonly>
+        <input type="text" class="box" readonly>
+        <input type="text" class="box" readonly>
+        <input type="text" class="box" readonly>
+        <input type="text" class="box" readonly>
+        <input type="text" class="box" readonly>
+        
+     </div>
+     <div id="playerXSection">
+      <h3 id="playerX"> playerX</h3>
+     </div>
+     <p id="xWon">X wins </p>
+     <p id="oWon">O wins </p>
+     <p id="draw"> Game Draw,<br>Lets Play Again </p>
+     <button id="reset">  Lets Play Again </button>
+    </div> 
+  <script src="main.js"></script>
+</body>
+</html>
