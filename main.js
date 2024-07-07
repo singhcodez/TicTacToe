@@ -173,16 +173,11 @@ generateRandom();
 box.forEach((val,valIndex)=>{
    
    function add0(){
-/*      if( !prevValue && prevValue!=0 && val.value==""){
-           val.value="0"
-           prevValue=valIndex;
-           
-      }*/
+
       if(box[prevValue].value=="X"){
             val.value="0";
             moves.splice(moves.indexOf(valIndex),1)
             prevValue=valIndex;
-            console.log(moves)
             move++;
             playerX.className="player"
             player0.className=""
@@ -195,7 +190,7 @@ box.forEach((val,valIndex)=>{
            }
       }
       
-      console.log("prev: ",prevValue,"move",move)
+      
    }
    
    val.addEventListener("click",add0)
@@ -207,6 +202,7 @@ function writeX(i){
     setTimeout(()=>{
     
      box[i].value="X"
+     box[i].disabled=true;
      player0.className="player"
      playerX.className=""
      if(move>3)
@@ -214,7 +210,7 @@ function writeX(i){
     }
     ,1000 )
     moves.splice(moves.indexOf(i),1)
-    console.log(moves)
+    
 }
 
 }
