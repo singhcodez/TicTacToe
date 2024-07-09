@@ -99,7 +99,7 @@ function reset(){
 
 // check who won the game
 let flagDraw=true; 
-let flagDrawComp=true;
+let flagDrawComp;
 const win=[[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
 function checkWinner(){
    
@@ -134,8 +134,9 @@ function checkWinner(){
           } 
           else if((move==9 && i==7 && j==2 && flagDraw==true) || (move==9 && flagDrawComp==true)){
                  draw();
+                 console.log("if - ",j,i,move,flagDraw)
           }
-          console.log(j,i)
+          console.log(j,i,move,flagDraw)
        })
 
       
@@ -149,6 +150,7 @@ function checkWinner(){
 document.getElementById("computer").addEventListener("click",playWithComputer)
 function playWithComputer(){
  alert("Try to Win, if you can")
+ flagDrawComp=true;
  player1="You"
  player2="Computer"
  playerX.className="player"
