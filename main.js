@@ -163,6 +163,7 @@ function playWithComputer(){
  
 const moves=[0,1,2,3,4,5,6,7,8];
 let randomIndex;
+
 function generateRandom(){
  randomIndex=Math.floor(Math.random()*(moves.length-1))
 let moveX=moves[randomIndex]
